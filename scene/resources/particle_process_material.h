@@ -230,10 +230,8 @@ private:
 		StringName emission_ring_inner_radius;
 
 		StringName turbulence_enabled;
-		StringName turbulence_noise_strength;
 		StringName turbulence_noise_scale;
-		StringName turbulence_noise_speed;
-		StringName turbulence_noise_speed_random;
+		StringName turbulence_noise_evolution_speed;
 		StringName turbulence_influence_over_life;
 		StringName turbulence_influence_min;
 		StringName turbulence_influence_max;
@@ -291,11 +289,9 @@ private:
 	bool anim_loop = false;
 
 	bool turbulence_enabled;
-	Vector3 turbulence_noise_speed;
+	float turbulence_noise_evolution_speed;
 	Ref<Texture2D> turbulence_color_ramp;
-	float turbulence_noise_strength = 0.0f;
 	float turbulence_noise_scale = 0.0f;
-	float turbulence_noise_speed_random = 0.0f;
 
 	Vector3 gravity;
 
@@ -373,16 +369,12 @@ public:
 	int get_emission_point_count() const;
 
 	void set_turbulence_enabled(bool p_turbulence_enabled);
-	void set_turbulence_noise_strength(float p_turbulence_noise_strength);
 	void set_turbulence_noise_scale(float p_turbulence_noise_scale);
-	void set_turbulence_noise_speed_random(float p_turbulence_noise_speed_random);
-	void set_turbulence_noise_speed(const Vector3 &p_turbulence_noise_speed);
+	void set_turbulence_noise_evolution_speed(float p_turbulence_noise_evolution_speed);
 
 	bool get_turbulence_enabled() const;
-	float get_turbulence_noise_strength() const;
 	float get_turbulence_noise_scale() const;
-	float get_turbulence_noise_speed_random() const;
-	Vector3 get_turbulence_noise_speed() const;
+	float get_turbulence_noise_evolution_speed() const;
 
 	void set_gravity(const Vector3 &p_gravity);
 	Vector3 get_gravity() const;

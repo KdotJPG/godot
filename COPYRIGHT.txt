@@ -85,6 +85,12 @@ Copyright: 2001, Robert Penner
  2014-2022 Godot Engine contributors.
 License: Expat
 
+Files: ./scene/resources/particle_process_material.cpp
+Comment: Simplex noise (Ashima Arts), Vector hash functions (David Hoskins)
+Copyright: 2011, Ashima Arts
+ 2014, David Hoskins
+License: MIT
+
 Files: ./servers/physics_3d/collision_solver_3d_sat.cpp
 Comment: Open Dynamics Engine
 Copyright: 2001-2003, Russell L. Smith, Alen Ladavac, Nguyen Binh
