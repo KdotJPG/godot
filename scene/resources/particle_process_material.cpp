@@ -439,7 +439,7 @@ void ParticleProcessMaterial::_update_shader() {
 		code += "	position_and_time -= TIME * vec4(turbulence_noise_directional_pan, turbulence_noise_evolution_speed);\n";
 		code += "	vec3 curl, coalescence;\n";
 		code += "	evolving_curl_3d(position_and_time, curl, coalescence);\n";
-		code += "	return normalize(curl + turbulence_sharpness * coalescence);\n";
+		code += "	return normalize(curl + turbulence_sharpness * cross(curl, coalescence));\n";
 		code += "}";
 	}
 
